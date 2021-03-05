@@ -9,14 +9,14 @@ examples:
     usage:
       version: 2.1
       orbs:
-        ms-teams: cloudradar-monitoring/ms-teams@1.0.0
+        ms-teams-orbs: vpelissi/ms-teams-orbs@1.0.0
       jobs:
         build:
           executor: docker
           steps:
             - checkout
             - run: command/to/run/your/tests
-            - ms-teams/report:
+            - ms-teams-orbs/report:
                 only_on_fail: true
                 webhook_url: $MS_TEAMS_WEBHOOK_URL
 
